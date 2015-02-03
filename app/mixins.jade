@@ -25,6 +25,17 @@ mixin perkPhoto( perkNum, dimensions, shipping )
 	div
 		img(src="images/perk_#{perkNum}.jpg")
 		span(style="text-align:left;") #{dimensions}
+		if (perkNum == 12 || perkNum == 13 )
+			span(style="float:right; text-align:right;") Shipping: USD $#{shipping} worldwide rolled shipping.
+		else 
+			span(style="float:right; text-align:right;") Shipping: USD $#{shipping} worldwide shipping.
+
+
+
+mixin perkPhotoEsp( perkNum, dimensions, shipping )
+	div
+		img(src=url+"images/perk_#{perkNum}.jpg")
+		span(style="text-align:left;") #{dimensions}
 		if (perkNum == 12 || perkNum == 13)
 			span(style="float:right; text-align:right;") Envío: USD $#{shipping} enrollada a cualquier parte del mundo.
 		else 

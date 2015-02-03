@@ -1,0 +1,43 @@
+!!! 5
+html(lange="en")
+
+	head
+		include meta
+
+		//Favicon
+		link( rel="shortcut icon", href="/favicon.ico")
+		link( rel="apple-touch-icon", href="/apple-touch-icon.png")
+
+		link( rel="stylesheet", media="screen", href="styles/main.css")
+
+		link( href="https://g0.iggcdn.com/assets/select2/select2-01d1ad70f9743bee1f69f028fdd85ce9.css" )
+		link( href="https://g0.iggcdn.com/assets/site/fonts-e75f5908d401f0f88796b160aadab0c8.css" )
+		link( href="https://g2.iggcdn.com/assets/site/common-c1ed04604a36bb56c4dd31cc7b3d07f5.css" )
+  
+		link( href="https://g2.iggcdn.com/assets/site/redactor-f3dff7c9f86a110a7e4361605a1fbe64.css" )
+		link( href="https://g3.iggcdn.com/assets/site/campaign_page-51354f8048a6cc78713e4ca3a865a096.css" )
+
+	body.home
+		.col-xs-8.i-main-column
+			.js-tab-content
+				.i-description
+					.i-tagline Experience and share Chilean classical music trough abstract art with original paintings, prints and greeting cards.
+
+
+					div(id="english", style="margin:24px 0 24px; font-size:24px;")
+						a(href="#english", style="margin-right:16px; font-weight:bold; color:#000;") In English
+						|  | 
+						a(href="#spanish", style="margin-left:16px; color:#EE0077; text-decoration:underline; font-weight:bold;") En Español
+
+					hr 
+
+
+					include english
+
+					div(id="spanish", style="margin:24px 0 24px; font-size:24px;")
+						a(href="#english", style="margin-right:16px; color:#EE0077; text-decoration:underline; font-weight:bold;") In English
+						|  | 
+						a(href="#spanish", style="margin-left:16px; font-weight:bold; color:#000;") En Español
+
+					hr 
+					include spanish

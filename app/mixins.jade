@@ -1,42 +1,49 @@
-mixin perk( number, title, price )
-	div(style="width:100%; height:5px; margin:24px 0 32px; background:#E5E5E5;")
+- var url = 'https://cdn.rawgit.com/bernatfortet/Ancient/master/app/'
 
-	div(style="margin:16px 0; font-size:36px; line-height:36px; overflow:hidden; ")
-		div(style="width:80px; float:left; font-weight:bold; color:#EE0077; letter-spacing:-0.05em;") ##{number}
-		div(style="width:435px; float:left;") #{title}
-		div(style=" float:right; font-weight:bold; text-align:right;") $#{price}
+mixin perk( number, title, price )
+	div(style="width:100%; height:5px; margin:24px 0 32px!important; background-color:#E5E5E5 !important;")
+
+	div(style="margin-top:16px !important; margin-bottom:16px; overflow:hidden; ")
+		div(style="width:80px; margin-bottom:20px; float:left; font-size:36px !important; line-height:36px !important; font-weight:bold; color:#EE0077 !important;") ##{number}
+		div(style="width:400px; float:left; font-size:36px !important; line-height:36px !important; ") #{title}
+		div(style="float:right; font-size:36px !important; line-height:36px !important; font-weight:bold; text-align:right;") $#{price}
 
 mixin h3-double( first, second)
-	h3(style="line-height:24px; margin:48px 0 24px;") #{first} 
+	br
+	br
+	h3(style="line-height:24px !important;") #{first} 
 		br
 		span(style="font-weight:normal; font-style:italic; color:#999;") #{second}
+	br
 
 
 mixin composer( name, img, youtube, wiki)
 	div(style="position:relative; width:98px; float:left; margin-right:5px;")
 		a(href="#{youtube}")
-			img(style="width:44px; height:44px; position:absolute; left:50%; margin-left:-22px; top:98px;", src="images/play.png")
-			img(style="width:98px;", src="images/comp_#{img}.jpg")
-		a(href="#{wiki}", style="text-decoration:none; color:black;")		
+			div(style="width:44px; height:44px; position:absolute; left:50%; margin-left:-22px; top:98px;")
+				img(style="width:44px; height:44px;", src=url+"images/play.png")
+			div(style="width:98px;")
+				img(style="width:98px;", src=url+"images/comp_#{img}.jpg")
+		a(href="#{wiki}", style="text-decoration:none; color:black;") 	
 			p(style="padding:0 6px; line-height:16px; text-align:center; font-style:italic; ") #{name}
 
 
 mixin perkPhoto( perkNum, dimensions, shipping )
 	div
-		img(src="images/perk_#{perkNum}.jpg")
-		span(style="text-align:left;") #{dimensions}
+		img(src=url+"images/perk_#{perkNum}.jpg")
+		span(style="display:inline-block; margin-top:8px; text-align:left;") #{dimensions}
 		if (perkNum == 12 || perkNum == 13 )
-			span(style="float:right; text-align:right;") Shipping: USD $#{shipping} worldwide rolled shipping.
+			span(style="display:inline-block; margin-top:8px; float:right; text-align:right;") Shipping: USD $#{shipping} worldwide rolled shipping.
 		else 
-			span(style="float:right; text-align:right;") Shipping: USD $#{shipping} worldwide shipping.
+			span(style="display:inline-block; margin-top:8px; float:right; text-align:right;") Shipping: USD $#{shipping} worldwide shipping.
 
 
 
 mixin perkPhotoEsp( perkNum, dimensions, shipping )
 	div
 		img(src=url+"images/perk_#{perkNum}.jpg")
-		span(style="text-align:left;") #{dimensions}
+		span(style="display:inline-block; margin-top:8px; text-align:left;") #{dimensions}
 		if (perkNum == 12 || perkNum == 13)
-			span(style="float:right; text-align:right;") Envío: USD $#{shipping} enrollada a cualquier parte del mundo.
+			span(style="display:inline-block; margin-top:8px; float:right; text-align:right;") Envío: USD $#{shipping} enrollada a cualquier parte del mundo.
 		else 
-			span(style="float:right; text-align:right;") Envío: USD $#{shipping} cualquier parte del mundo.
+			span(style="display:inline-block; margin-top:8px; float:right; text-align:right;") Envío: USD $#{shipping} cualquier parte del mundo.

@@ -1,8 +1,7 @@
-!!! 5
+doctype html
 html(lange="en")
 
 	head
-		include meta
 
 		//Favicon
 		link( rel="shortcut icon", href="/favicon.ico")
@@ -23,11 +22,13 @@ html(lange="en")
 				.i-description
 					.i-tagline Experience and share Chilean classical music trough abstract art with original paintings, prints and greeting cards.
 
+					//asdf
+
 
 					div(id="english", style="margin:24px 0 24px; font-size:24px;")
-						a(href="#english", style="margin-right:16px; font-weight:bold; color:#000;") In English
+						a(href="#english", style="margin-right:16px; font-weight:bold; color:#000 !important;") In English
 						|  | 
-						a(href="#spanish", style="margin-left:16px; color:#EE0077; text-decoration:underline; font-weight:bold;") En Español
+						a(href="#spanish", style="margin-left:16px; color:#EE0077 !important; text-decoration:underline; font-weight:bold;") En Español
 
 					hr 
 
@@ -35,9 +36,11 @@ html(lange="en")
 					include english
 
 					div(id="spanish", style="margin:24px 0 24px; font-size:24px;")
-						a(href="#english", style="margin-right:16px; color:#EE0077; text-decoration:underline; font-weight:bold;") In English
+						a(href="#english", style="margin-right:16px; color:#EE0077 !important; text-decoration:underline; font-weight:bold;") In English
 						|  | 
-						a(href="#spanish", style="margin-left:16px; font-weight:bold; color:#000;") En Español
+						a(href="#spanish", style="margin-left:16px; font-weight:bold; color:#000 !important;") En Español
 
 					hr 
 					include spanish
+
+					//asdf

@@ -108,7 +108,6 @@ module.exports = function (grunt) {
                     ext: '.html'
                 }],
                 options: {
-                    client: false,
                     pretty: false
                 }
             }
@@ -188,6 +187,7 @@ module.exports = function (grunt) {
         'less:dist',
         'jade:dist',
         'copy',
+        'default'
     ]);
     
     grunt.registerTask('deploy', [
